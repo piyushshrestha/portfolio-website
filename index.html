@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+        <title>Piyush shrestha Portfolio</title>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function() {
+                $(".featured_projects .content .desc").hide();
+            
+                $(".featured_projects .img").mouseenter(function() {
+                    $(".featured_projects .img .overlay").removeClass("overlay-visible");
+                    $(".featured_projects .img .desc").hide();
+                    $(this).find('.overlay').addClass("overlay-visible");
+                    $(this).find('.desc').show();
+                });
+            
+                $(".featured_projects .opt-cont .tab").click(function() {
+                    const filterValue = $(this).attr('data-filter');
+                    
+                    if (filterValue === 'all') {
+                        $(".featured_projects .content .img").show('500');
+                    } else {
+                        $(".featured_projects .content .img").not('.' + filterValue).hide('500');
+                        $(".featured_projects .content .img").filter('.' + filterValue).show('500');
+                    }
+            
+                    $(this).addClass('tab-active').siblings().removeClass('tab-active');
+                });
+            });
+            </script>
+            
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Piyush shrestha</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">
+                        Hi,<br>I'm <span class="home__title-color">Piyush</span><br>
+                        <span id="typewriter" class="typewriter"></span>
+                    </h1>
+                    <a href="#" class="button">Download CV</a>
+                </div>
+            
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/piyushsth321/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#" class="home__social-icon"><i class='bx bxl-behance'></i></a>
+                    <a href="#" class="home__social-icon"><i class='bx bxl-github'></i></a>
+                </div>
+            
+                <div class="home__img">
+                    <img src="assets/img/Images.jpg"  class="blob">
+                </div>
+            </section>
+            
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/about.png" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I'am Piyush Shrestha</h2>
+                        <p class="about__text">As a dedicated and innovative professional, I am passionate about leveraging technology to drive impactful solutions. With a strong background in [mention specific field or expertise], I have consistently demonstrated my ability to [highlight key skills or achievements, e.g., lead projects, develop software, etc.]. My experience spans [mention relevant industries or sectors], where I have honed my skills in [list specific skills or areas of expertise]. I thrive in dynamic environments and am always eager to embrace new challenges and opportunities for growth. Let's connect and explore how we can collaborate to create meaningful advancements in our field.
+
+                        </p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">Professional Skills</h2>
+                        <h2 class="skills__subtitle">Video Editor Skills</h2>
+                     <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='fas fa-video'></i>
+                                <span class="skills__name">Technical Profiency</span>
+                            </div>
+                            <div class="skills__bar skills__html"></div>
+                            <div><span class="skills__percentage">95%</span></div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='fas fa-film'></i>
+                                <span class="skills__name">Creative Storytelling</span>
+                            </div>
+                            <div class="skills__bar skills__html"></div>
+                            <div><span class="skills__percentage">88%</span></div>
+                        </div>
+                        <h2 class="skills__subtitle">Graphic Designer Skills</h2>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='fas fa-palette'></i>
+                                <span class="skills__name">Design Principles</span>
+                            </div>
+                            <div class="skills__bar skills__html"></div>
+                            <div><span class="skills__percentage">87%</span></div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='fas fa-laptop-code'></i>
+                                <span class="skills__name">Software Proficiency</span>
+                            </div>
+                            <div class="skills__bar skills__html"></div>
+                            <div><span class="skills__percentage">82%</span></div>
+                        </div>
+                        <!-- Add other skills similarly -->
+                    </div>
+                    <div>
+                        <h2 class="skills__subtitle">Technical Skills</h2>
+                        
+                        <div class="skills__data">
+                            <div class="circular-progress" data-percentage="90">
+                                <span class="progress-value">0%</span>
+                            </div>
+                            <span class="text">Technical Proficiency</span>
+                            <button class="details-button" onclick="toggleDetails(this)">Details</button>
+                            <p class="details-text">
+                                Possesses a strong understanding of advanced technologies, including proficiency in programming languages, database management, and network architecture. This skill set ensures the capability to design, develop, and maintain complex systems efficiently.
+                            </p>
+                        </div>
+                        
+                        <div class="skills__data">
+                            <div class="circular-progress" data-percentage="80">
+                                <span class="progress-value">0%</span>
+                            </div>
+                            <span class="text">Software Proficiency</span>
+                            <button class="details-button" onclick="toggleDetails(this)">Details</button>
+                            <p class="details-text">
+                                Expertise in using a wide range of software tools and applications, including operating systems, productivity software, and specialized applications like Adobe Suite, Microsoft Office, and CAD programs. This proficiency is crucial for executing various tasks with precision and creativity.
+                            </p>
+                        </div>
+                    </div>
+                    
+                        
+                        <!-- Add other skills similarly -->
+                    </div>
+                </div>
+            </section>
+                    
+                    
+                </div>
+            </section>
+<!--===== WORK =====-->
+<section class="work section" id="work">
+    <h2 class="section-title">Work</h2>
+    <div class="featured_projects" unique-script-id="w-w-dm-id">
+        <div class="container-block bg">
+            <p class="text-blk heading">Featured Projects</p>
+            <div class="responsive-container-block opt-cont">
+                <p class="text-blk tab tab-active" data-filter="all">All</p>
+                <p class="text-blk tab" data-filter="graphdes">Graphics Design</p>
+                <p class="text-blk tab" data-filter="viddev">Video Editing</p>
+            </div>
+            <div class="responsive-container-block content">
+                <div class="responsive-container-block img graphdes mobdev">
+                    <img class="im" src="assets/img/work.jpg" alt="Work Image 1">
+                </div>
+                <div class="responsive-container-block img graphdes mobdev">
+                    <img class="im" src="assets/img/work1.jpeg" alt="Work Image 2">
+                </div>
+                <div class="responsive-container-block img graphdes mobdev">
+                    <img class="im" src="assets/img/work2.jpeg" alt="Work Image 3">
+                </div>
+                <div class="responsive-container-block img graphdes mobdev">
+                    <img class="im" src="assets/img/work3.jpeg" alt="Work Image 4">
+                </div>
+                <div class="responsive-container-block img graphdes mobdev">
+                    <img class="im" src="assets/img/work4.jpeg" alt="Work Image 5">
+                </div>
+                <div class="responsive-container-block img graphdes mobdev">
+                    <img class="im" src="assets/img/work5.jpeg" alt="Work Image 6">
+                </div>
+                <div class="responsive-container-block img graphdes mobdev more-images" style="display: none;">
+                    <img class="im" src="assets/img/work6.jpeg" alt="Work Image 7">
+                </div>
+                <div class="responsive-container-block img graphdes mobdev more-images" style="display: none;">
+                    <img class="im" src="assets/img/work7.jpeg" alt="Work Image 8">
+                </div>
+                <div class="responsive-container-block img graphdes mobdev more-images" style="display: none;">
+                    <img class="im" src="assets/img/work8.jpeg" alt="Work Image 9">
+                </div>
+                <div class="responsive-container-block img graphdes mobdev more-images" style="display: none;">
+                    <img class="im" src="assets/img/work9.jpeg" alt="Work Image 10">
+                </div>
+            </div>
+            <button class="see-more-btn">See More</button>
+            <button class="close-btn" style="display: none;">Close</button>
+        </div>
+    </div>
+</section>
+
+<script>
+document.querySelector('.see-more-btn').addEventListener('click', function () {
+    document.querySelectorAll('.more-images').forEach(function (element) {
+        element.style.display = 'block';
+    });
+    this.style.display = 'none';
+    document.querySelector('.close-btn').style.display = 'inline-block';
+});
+
+document.querySelector('.close-btn').addEventListener('click', function () {
+    document.querySelectorAll('.more-images').forEach(function (element) {
+        element.style.display = 'none';
+    });
+    this.style.display = 'none';
+    document.querySelector('.see-more-btn').style.display = 'inline-block';
+});
+
+// Filter functionality
+document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+        const filter = this.getAttribute('data-filter');
+        document.querySelectorAll('.img').forEach(img => {
+            if (filter === 'all' || img.classList.contains(filter)) {
+                img.style.display = 'block';
+            } else {
+                img.style.display = 'none';
+            }
+        });
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('tab-active'));
+        this.classList.add('tab-active');
+        document.querySelector('.see-more-btn').style.display = 'inline-block';
+        document.querySelector('.close-btn').style.display = 'none';
+        document.querySelectorAll('.more-images').forEach(img => img.style.display = 'none');
+    });
+});
+
+</script>
+
+
+              
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+            
+                <div class="contact__container bd-grid">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="eaae2174-8317-4b5e-83cf-4d94ca8cb247">
+                        <input type="text" name="name" placeholder="Name" class="contact__input" required>
+                        <input type="email" name="email" placeholder="Email" class="contact__input" required>
+                        <textarea name="message" placeholder="Details" cols="0" rows="10" class="contact__input" required></textarea>
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <input type="submit" value="Send" class="contact__button button">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Piyush Shrestha</p>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/piyushstha321" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://www.instagram.com/piyushstha1/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+            </div>
+            <p class="footer__copy">&#169; Piyush shrestha All rigths reserved</p>
+        </footer>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
